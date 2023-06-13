@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Student details</title>
+    <link rel="stylesheet" href="mainstyl.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>ADD NEW STUDENT</h1>
+    <br />
+    <form>
+      <div>
+        <lable for="cl">class:</lable>
+        <input
+          type="number"
+          id="cl"
+          name="cl"
+          placeholder="1 - +2"
+          max="12"
+          min="1"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <lable for="sname">Name of Student:</lable>
+        <input
+          type="text"
+          id="sname"
+          name="sname"
+          placeholder="Anmolpreet Singh Dhillon"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <lable for="fname">Fathers Name:</lable>
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="Gurpreet Singh Dhillon"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <lable for="mname">Mothers Name:</lable>
+        <input
+          type="text"
+          id="mname"
+          name="mname"
+          placeholder="Simrandeep Kaur Dhillon"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <lable for="admno">Addmission number:</lable>
+        <input
+          type="number"
+          id="admno"
+          name="admno"
+          placeholder="2652013"
+          min="1000000"
+          max="9999999"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="email">email of parents:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="gurpreetdhillon295@gmail.com"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="phno">Phone number of parents:</label>
+        <input
+          type="tel"
+          id="phno"
+          name="phno"
+          placeholder="9645635217"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="alphno">Alternative Phone number of parents:</label>
+        <input type="tel" id="alphno" name="alphno" placeholder="8142563217" />
+      </div>
+      <br />
+      <div class="resubbutton">
+        <input type="reset" id="resetbtn" />
+        <input type="submit" id="submitbtn" />
+      </div>
+    </form>
+    <!-- <script src="index.js"></script> -->
+    <script>
+      const form = document.querySelector("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const fd = new FormData(form);
+        const obj = Object.fromEntries(fd);
+        const json = JSON.stringify(obj);
+        console.log(json);
+      });
+    </script>
+  </body>
+</html>
