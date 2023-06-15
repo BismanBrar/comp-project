@@ -2,7 +2,7 @@ body{
     background-color: #967539;
 
 background-image: url("background.jpg");
-opacity: 1;
+opacity: .8;
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-position: center;
@@ -68,5 +68,4 @@ form{
 #reader{
     background: linear-gradient(to left,#ae9668,#bdbbb6);
     width: 600px;
-    opacity: 1;
-    }
+    opacity: 1;  }
